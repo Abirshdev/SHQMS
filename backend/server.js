@@ -28,6 +28,7 @@ app.set('io', io);
 app.use('/api/auth', require('./routes/auth'));
 app.use('/api/departments', require('./routes/departments'));
 app.use('/api/queue', require('./routes/queue'));
+app.use('/api/seed', require('./routes/seed'));
 
 // Socket.IO connection
 io.on('connection', (socket) => {
