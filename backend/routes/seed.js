@@ -10,7 +10,7 @@ const departments = [
   { name: 'Laboratory', description: 'Blood tests and diagnostics' },
 ];
 
-router.post('/run', async (req, res) => {
+router.get('/run', async (req, res) => {
   try {
     // Create departments
     for (const dept of departments) {
