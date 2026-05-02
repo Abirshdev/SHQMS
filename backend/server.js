@@ -11,7 +11,14 @@ const io = new Server(server, {
   cors: { origin: '*' }
 });
 
-app.use(cors());
+app.use(cors({
+  origin: [
+    'http://localhost:5173',
+    /\.vercel\.app$/,
+    /\.onrender\.com$/
+  ],
+  credentials: true
+}));
 app.use(express.json());
 
 // Make io accessible in routes
